@@ -10,6 +10,8 @@ public class First {
         System.out.println("first git commit");
         System.out.println("second git commit");
         System.out.println("master commit");
-        System.out.println("master commit second");
+        System.out.println("second git commit");
+        System.out.println("master commit");
+        System.out.println("hali commit");
     }
 }
