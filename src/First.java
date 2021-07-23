@@ -8,5 +8,8 @@ import java.sql.SQLOutput;
 public class First {
     public static void main(String[] args) {
         System.out.println("first git commit");
+        System.out.println("second git commit");
+        System.out.println("master commit");
+        System.out.println("hali commit");
     }
 }
