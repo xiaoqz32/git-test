@@ -15,5 +15,6 @@ public class First {
         System.out.println("hali commit");
         System.out.println("github commit");
         System.out.println("github modified commit");
+        System.out.println("gitee modified commit");
     }
 }
