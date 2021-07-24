@@ -14,5 +14,6 @@ public class First {
         System.out.println("master commit");
         System.out.println("hali commit");
         System.out.println("github commit");
+        System.out.println("github modified commit");
     }
 }
