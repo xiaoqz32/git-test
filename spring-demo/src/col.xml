@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="stu" class="xiao.collections.Stu">
+        <!--数组-->
+        <property name="arr">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+            </array>
+        </property>
+        <!--list-->
+        <property name="list">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+        <!--map-->
+        <property name="map">
+            <map >
+                <entry key="1" value="First"></entry>
+                <entry key="2" value="Second"></entry>
+                <entry key="3" value="Third"></entry>
+            </map>
+        </property>
+        <!--set-->
+        <property name="set">
+            <set>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </set>
+        </property>
+        <!--集合中注入对象-->
+        <property name="courses">
+            <list>
+                <ref bean="course1"></ref>
+                <ref bean="course2"></ref>
+            </list>
+        </property>
+    </bean>
+    <!--对象数组-->
+    <bean id="course1" class="xiao.collections.Course">
+        <property name="cname" value="xiao1"></property>
+    </bean>
+    <bean id="course2" class="xiao.collections.Course">
+        <property name="cname" value="xiao2"></property>
+    </bean>
+
+
+</beans>

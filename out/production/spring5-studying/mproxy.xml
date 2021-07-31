@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+ http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- 开启注解扫描 -->
+    <context:component-scan base-package="annotate"></context:component-scan>
+    <!-- 开启 Aspect 生成代理对象-->
+    <!--这里要加上：proxy-target-class="true" 否则会报错，原因是他的默认值是false
+    proxy-target-class属性值决定是基于接口的还是基于类的代理被创建。
+    如果proxy-target-class 属性值被设置为true，那么基于类的代理将起作用（这时需要cglib库）。
+    如果proxy-target-class 属值被设置为false或者这个属性被省略，那么标准的JDK基于接口的代理
+    -->
+    <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+</beans>

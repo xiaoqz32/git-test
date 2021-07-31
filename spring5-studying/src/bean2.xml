@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--自动装配 byName byType-->
+    <!--自动装配 byName 在此中即会执行id=dept的bean 即属性名等于id名-->
+    <!--自动装配 byType dept和dept1都是同一个类 所以这里会报错-->
+    <bean id="emp" class="xiao.dao.Employee" autowire="byName"></bean>
+    <bean id="dept" class="xiao.dao.Department">
+        <property name="dname" value="技术部"></property>
+    </bean>
+    <bean id="dept1" class="xiao.dao.Department">
+        <property name="dname" value="人事部"></property>
+    </bean>
+</beans>

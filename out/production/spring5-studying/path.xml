@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="path" class="xiao.dao.Path" init-method="initMethod" destroy-method="destoryMethod">
+        <property name="hello" value="he"></property>
+    </bean>
+    <!--配置后置处理器 在同一个文件中的有设置init-method="initMethod"的实例，调用该前后方法-->
+    <bean id="mybeanpost" class="xiao.bean.MyBeanPost"></bean>
+</beans>
